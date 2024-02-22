@@ -13,3 +13,9 @@ salary_bonus = CONSTANT + salary * bonus_percent
 
 print(f"Olá {user_name}, seu bônus foi de {salary_bonus}")
 
+# Expected bugs on this script
+# 1. Invalid name: numbers or special caracteres inputed by user.
+# 2. Negative salary: it's impossible.
+# 3. Invalid salary/bonus: a text or any different caracter informed by user.
+# 4. Negative bonus: on this case, it's not expected to reduce user's salary.
+
