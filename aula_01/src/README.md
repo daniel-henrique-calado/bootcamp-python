@@ -8,7 +8,7 @@ Apply some simple math operations to demonstrate basic use cases.
 
  **Exercise 01**
 
-Asks a user his name and returns number of characteres.
+Asks a user his name and returns number of caracteres.
 
 ```bash
 Type your name: Daniel
