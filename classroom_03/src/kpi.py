@@ -1,0 +1,59 @@
+"""
+Receives a user name, his salary and a bonification value percent.
+Uses the following expression to calculate his salary bonus.
+salary_bonus: 1000 + salary * bonus_percent
+"""
+CONSTANT = 1000
+
+valid_name = False
+valid_salary = False
+valid_bonus = False
+
+while not valid_name:
+    try:
+        user_name = input("Enter your name: ")
+
+        if user_name.isspace() or len(user_name) == 0:
+            raise ValueError("Name can not be blank.")
+
+        if any(char.isdigit() or not char.isalpha() for char in user_name):
+            raise ValueError("Name can not contain numbers or special characters.")
+
+        valid_name = True
+        print(f"Valid name: {user_name}")
+    except ValueError as e:
+        print(e)
+
+while not valid_salary:
+    try:
+        salary = float(input("Enter your monthly salary: $ "))
+
+        if salary < 0:
+            raise ValueError("The salary cannot be lower than zero.")
+        valid_salary = True
+        print(f"Salary: $ {salary}")
+    except ValueError:
+        print("The value provided is invalid for the salary. Try again.")
+
+while not valid_bonus:
+    try:
+        bonus_percent = float(input("Enter your percentual bonus: "))
+
+        if bonus_percent < 0:
+            raise ValueError("The bonus cannot be lower than zero.")
+        
+        valid_bonus = True
+        print(f"Bonus: {bonus_percent}")
+    except ValueError:
+        print("The value provided is invalid for the bonus. Try again.")
+
+salary_bonus = CONSTANT + salary * bonus_percent
+print(f"Hi {user_name}, your bonus was {salary_bonus:.2f}")
+
+
+# Expected bugs on this script
+# 1. Invalid name: numbers or special caracteres inputed by user.
+# 2. Negative salary: it's impossible.
+# 3. Invalid salary/bonus: a text or any different caracter informed by user.
+# 4. Negative bonus: on this case, it's not expected to reduce user's salary.
+
