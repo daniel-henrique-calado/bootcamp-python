@@ -13,7 +13,7 @@ try:
 
     if temperature < LOW_TEMPERATURE:
         print("Low.")
-    elif temperature >= LOW_TEMPERATURE and temperature <= HIGH_TEMPERATURE:
+    elif LOW_TEMPERATURE <= temperature <= HIGH_TEMPERATURE:
         print("Normal.")
     else:
         print("High.")
