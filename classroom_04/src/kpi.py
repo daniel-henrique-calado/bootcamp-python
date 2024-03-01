@@ -3,57 +3,60 @@ Receives a user name, his salary and a bonification value percent.
 Uses the following expression to calculate his salary bonus.
 salary_bonus: 1000 + salary * bonus_percent
 """
-CONSTANT:int = 1000
 
-valid_name:bool = False
-valid_salary:bool = False
-valid_bonus:bool = False
-
-while not valid_name:
+def get_user_name(user: dict) -> dict:
     try:
         user_name:str = input("Enter your name: ")
-
+        
         if user_name.isspace() or len(user_name) == 0:
-            raise ValueError("Name can not be blank.")
+            ValueError("Name can not be blank.")
 
         if any(char.isdigit() or not char.isalpha() for char in user_name):
-            raise ValueError("Name can not contain numbers or special characters.")
+            ValueError("Name can not contain numbers or special characters.")
+        
+        user["name"] = user_name
+        return user
+    except ValueError as ve:
+        print(ve)
+        raise
 
-        valid_name = True
-        print(f"Valid name: {user_name}")
-    except ValueError as e:
-        print(e)
-
-while not valid_salary:
+def get_user_salary(user:dict) -> dict:
     try:
         salary:float = float(input("Enter your monthly salary: $ "))
 
         if salary < 0:
             raise ValueError("The salary cannot be lower than zero.")
-        valid_salary = True
-        print(f"Salary: $ {salary}")
+        
+        user["salary"] = salary
+        return user
     except ValueError:
         print("The value provided is invalid for the salary. Try again.")
 
-while not valid_bonus:
+def get_user_bonus(user: dict) -> dict:
     try:
         bonus_percent:float = float(input("Enter your percentual bonus: "))
 
         if bonus_percent < 0:
             raise ValueError("The bonus cannot be lower than zero.")
         
-        valid_bonus = True
-        print(f"Bonus: {bonus_percent}")
+        user["bonus"] = bonus_percent
+        return user
     except ValueError:
         print("The value provided is invalid for the bonus. Try again.")
 
-salary_bonus = CONSTANT + salary * bonus_percent
-print(f"Hi {user_name}, your bonus was {salary_bonus:.2f}")
+def calculate_user_salary_bonus(user:dict) -> dict:
+    CONSTANT:int = 1000
+    user["salary_bonus"] = user["salary"] * user["bonus"] + CONSTANT
+    return user
+    
 
+if __name__ == "__main__":
+    user:dict = {}
+    user = get_user_name(user=user)
+    user = get_user_salary(user=user)
+    user = get_user_bonus(user=user)
+    user =calculate_user_salary_bonus(user=user)
 
-# Expected bugs on this script
-# 1. Invalid name: numbers or special caracteres inputed by user.
-# 2. Negative salary: it's impossible.
-# 3. Invalid salary/bonus: a text or any different caracter informed by user.
-# 4. Negative bonus: on this case, it's not expected to reduce user's salary.
+    print(f"User info:\n{user}")
+    
 
