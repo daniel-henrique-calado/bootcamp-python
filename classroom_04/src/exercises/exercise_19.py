@@ -4,7 +4,6 @@ The function should return all combinations of pairs in the list that add up to 
 """
 
 def combinate_numbers(numbers: list, reference: float) -> list:
-    
     return [num + reference for num in numbers]
 
 if __name__ == "__main__":
