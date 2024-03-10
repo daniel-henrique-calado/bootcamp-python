@@ -6,35 +6,36 @@ salary_bonus: 1000 + salary * bonus_percent
 CONSTANT = 1000
 
 try:
-    user_name = input("Digite seu nome: ")
+    user_name = input("Enter your name: ")
 
     if user_name.isspace() or len(user_name) == 0:
-        raise ValueError("O nome não ser vazio.")
+        raise ValueError("The name can not be blank.")
 
     if any(char.isdigit() or not char.isalpha() for char in user_name):
-        raise ValueError("O nome não deve conter números ou caracteres especiais.")
+        raise ValueError("The name must not contain numbers or "
+                         "special characters.")
 
 except ValueError as e:
     print(e)
 
 try:
-    salary = float(input("Informe seu salário mensal : R$ "))
+    salary = float(input("Enter your monthly salary: R$ "))
 
     if salary < 0:
-        raise ValueError("O salário ou bônus não podem ser menor que zero.")
+        raise ValueError("The salary cannot be less than zero.")
 except ValueError:
-    print("O valor inválido fornecido para o salário. Tente novamente.")
+    print("The invalid value provided for the salary. Try again.")
 
 try:
-    bonus_percent = float(input("Informe seu bônus percentual: "))
+    bonus_percent = float(input("Enter your percentage bonus: "))
 
     if bonus_percent < 0:
-        raise ValueError("O  bônus não podem ser menor que zero.")
+        raise ValueError("The bonus cannot be less than zero.")
 except ValueError:
-    print("O valor inválido fornecido para o bônus. Tente novamente.")
+    print("Invalid value provided for the bonus. Please try again.")
 
 salary_bonus = CONSTANT + salary * bonus_percent
-print(f"Olá {user_name}, seu bônus foi de {salary_bonus:.2f}")
+print(f"Hi {user_name}, your bonus was {salary_bonus:.2f}")
 
 
 # Expected bugs on this script
@@ -42,4 +43,3 @@ print(f"Olá {user_name}, seu bônus foi de {salary_bonus:.2f}")
 # 2. Negative salary: it's impossible.
 # 3. Invalid salary/bonus: a text or any different caracter informed by user.
 # 4. Negative bonus: on this case, it's not expected to reduce user's salary.
-
