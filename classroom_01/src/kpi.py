@@ -5,13 +5,13 @@ salary_bonus: 1000 + salary * bonus_percent
 """
 CONSTANT = 1000
 
-user_name = input("Digite seu nome: ")
-salary = float(input("Informe seu salário mensal : R$ "))
-bonus_percent = float(input("Informe seu bônus percentual: "))
+user_name = input("Enter your name: ")
+salary = float(input("Enter your monthly salary: R$ "))
+bonus_percent = float(input("Enter your percentage bonus: "))
 
 salary_bonus = CONSTANT + salary * bonus_percent
 
-print(f"Olá {user_name}, seu bônus foi de {salary_bonus}")
+print(f"Hi {user_name}, your bonus was R$ {salary_bonus}")
 
 # Expected bugs on this script
 # 1. Invalid name: numbers or special caracteres inputed by user.

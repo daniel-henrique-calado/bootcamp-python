@@ -11,7 +11,7 @@ Apply some simple math operations to demonstrate basic use cases.
 Asks a user his name and returns number of caracteres.
 
 ```bash
-Type your name: Daniel
+Enter your name: Daniel
 6
 ```
 
@@ -20,8 +20,8 @@ Type your name: Daniel
 Asks a user two values and print out their sum. 
 
 ```bash
-Type a value: 10
-Type other value: 20
+Enter a value: 10
+Enter other value: 20
 30
 ```
 
