@@ -18,4 +18,3 @@ print(f"Hi {user_name}, your bonus was R$ {salary_bonus}")
 # 2. Negative salary: it's impossible.
 # 3. Invalid salary/bonus: a text or any different caracter informed by user.
 # 4. Negative bonus: on this case, it's not expected to reduce user's salary.
-
