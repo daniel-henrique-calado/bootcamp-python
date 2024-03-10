@@ -1,6 +1,6 @@
 """
-Transforme a full user name to lower case.
+Transform a full user name to lower case.
 """
 
-user_name = input("Informe seu nome completo: ")
-print(f"O seu nome completo em minúsculo é: {user_name.lower()}")
+user_name = input("Enter your full name: ")
+print(f"Your fullname formatted as lowercase:  {user_name.lower()}")

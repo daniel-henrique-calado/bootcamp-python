@@ -2,7 +2,8 @@
 Check if two numbers are different.
 """
 
-num_01 = int(input("Digite um número: "))
-num_02 = int(input("Digite outro número: "))
+num_01 = int(input("Enter a number: "))
+num_02 = int(input("Enter other number: "))
 
-print(f"A desigualdade entre os números {num_01} e {num_02} é: {num_01 != num_02}")
+print(f"The inequality between the numbers {num_01} and {num_02} is: \
+{num_01 != num_02}")

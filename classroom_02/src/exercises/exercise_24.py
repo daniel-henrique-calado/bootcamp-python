@@ -1,21 +1,22 @@
 """
-Inform with given number is positive, negative or zero. Check if is odd or even.
+Inform with given number is positive, negative or zero.
+Check if is odd or even.
 """
 
 try:
-    num = int(input("Digite um número: "))
+    num = int(input("Enter a number: "))
 
     if num > 0:
-        print(f"O número {num} é positivo.")
+        print(f"The number {num} is positive.")
     elif num < 0:
-        print(f"O número {num} é negativo.")
+        print(f"The number {num} is negative.")
     else:
-        print(f"O número {num} é zero.")
+        print(f"The number {num} is zero.")
 
     if num % 2 == 0:
-        print(f"O número {num} é par.")
-    else: 
-        print(f"O número {num} é ímpar.")
+        print(f"The number {num} is even.")
+    else:
+        print(f"The number {num} is odd.")
 
-except ValueError as e:
-    print("O dado deve ser do tipo int.")
+except ValueError:
+    print("The data must be of type int.")

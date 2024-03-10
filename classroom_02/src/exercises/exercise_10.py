@@ -5,7 +5,7 @@ from math import pi
 
 EXPONENT = 2
 
-radius = float(input("Informe o raio do círculo: "))
+radius = float(input("Enter the circle's radius: "))
 area = pi * radius ** EXPONENT
 
-print(f"A área do círculo de raio {radius} é: {area:.2f}")
+print(f"The area of the circle of radius {radius} is: {area:.2f}")

@@ -2,6 +2,6 @@
 Calculate a square from a given number.
 """
 POW_BASE = 2
-num = int(input("Informe um número: "))
+num = int(input("Enter a number: "))
 
-print(f"O quadrado de {num} é: {num ** POW_BASE}")
+print(f"The square of {num} is: {num ** POW_BASE}")

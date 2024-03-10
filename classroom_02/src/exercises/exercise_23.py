@@ -1,25 +1,26 @@
 """
-Simple calculator: enter two float/int values and asks for a operator (+,-,*,/).
-Print out the results or a error message. 
+Simple calculator: enter two float/int values and
+asks for a operator (+,-,*,/). Print out the results or a error message.
 """
 
 try:
-    num_01 = float(input("Informe um número: "))
-    num_02 = float(input("Informe outro número: "))
+    num_01 = float(input("Enter a number: "))
+    num_02 = float(input("Enter other number: "))
 
-    operator = input("Informe a operação que deseja executar (+,-,*,/): ")
+    operator = input("Which operation do you want to execute (+,-,*,/): ")
 
     if operator == "+":
-        print(f"A soma entre {num_01} e {num_02} é: {num_01 + num_02}")
+        print(f"The sum between {num_01} and {num_02} is: {num_01 + num_02}")
     elif operator == "-":
-        print(f"A diferença entre {num_01} e {num_02} é: {num_01 - num_02}")
+        print(f"The difference between {num_01} and {num_02} is: "
+              f"{num_01 - num_02}")
     elif operator == "*":
-        print(f"O produto entre {num_01} e {num_02} é: {num_01 * num_02}")
+        print(f"The product between {num_01} e {num_02} é: {num_01 * num_02}")
     elif operator == "/":
-        print(f"A divisão entre {num_01} e {num_02} é: {num_01 / num_02}")
+        print(f"The division between {num_01} e {num_02} é: {num_01 / num_02}")
     else:
-        raise("Operador inválido. Tente novamente.")
+        raise ("Invalid operator. Please try again.")
 except ValueError:
-    print("Dado inválido. Os dados devem ser do tipo float/int.")
+    print("Invalid data. The data must be of type float/int.")
 except ZeroDivisionError:
-    print("O divisor deve ser diferente de zero.")
+    print("The divisor must be different from zero.")

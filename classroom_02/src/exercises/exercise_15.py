@@ -2,7 +2,7 @@
 Concatenate two strings given by user.
 """
 
-string = input("Informe uma string: ")
-string += input("Informe outra string: ")
+string = input("Enter a string: ")
+string += input("Enter other string: ")
 
-print(f"Strings concatenadas: {string}")
+print(f"Concatenated strings: {string}")

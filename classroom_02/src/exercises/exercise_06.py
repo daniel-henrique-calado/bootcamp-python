@@ -2,7 +2,7 @@
 Calculate the sum of two float numbers.
 """
 
-num_01 = float(input("Digite um número: "))
-num_02 = float(input("Digite outro número: "))
+num_01 = float(input("Enter a number: "))
+num_02 = float(input("Enter other number: "))
 
-print(f"A soma dos números {num_01} e {num_02}: é {num_01 + num_02}")
+print(f"The sum of numbers {num_01} and {num_02} is: {num_01 + num_02}")

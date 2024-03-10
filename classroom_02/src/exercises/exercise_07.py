@@ -3,8 +3,8 @@ Calculate the mean between two float numbers.
 """
 QUANTITY_NUMBERS = 2
 
-num_01 = float(input("Digite um número: "))
-num_02 = float(input("Digite outro número: "))
+num_01 = float(input("Enter a number: "))
+num_02 = float(input("Enter other number: "))
 
-print(f"A média entre os números {num_01} e {num_02} é: {(num_01 + num_02)/QUANTITY_NUMBERS}")
-
+print(f"The mean between numbers {num_01} and {num_02} is: \
+{(num_01 + num_02)/QUANTITY_NUMBERS}")
